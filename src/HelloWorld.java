@@ -33,5 +33,7 @@ public class HelloWorld {
 //        y -= x;
 //        System.out.println(x);
 //        System.out.println(y);
+        System.out.println(Integer.MAX_VALUE);
+        System.out.println(1 - Integer.MAX_VALUE);
     }
 }

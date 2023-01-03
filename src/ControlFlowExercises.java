@@ -1,3 +1,6 @@
+import javax.swing.*;
+import java.util.Scanner;
+
 public class ControlFlowExercises {
     public static void main(String[] args) {
 //      1a.  While
@@ -48,6 +51,39 @@ public class ControlFlowExercises {
 //        }
 //        for(long i = 2; i<1000000; i*=i){
 //            System.out.println(i);
+//        }
+        //2. Fizzbuzz
+
+        //One of the most common interview questions for entry-level programmers is the FizzBuzz test. Developed by Imran Ghory, the test is designed to assess basic looping and conditional logic skills.
+
+        //Write a program that prints the numbers from 1 to 100.
+        //For multiples of three: print “Fizz” instead of the number.
+        //For the multiples of five: print “Buzz”.
+        //For numbers which are multiples of both three and five: print “FizzBuzz”.
+//        for(int i =1; i<=100; i++) {
+////            System.out.println(i);
+//            if( i % 3 == 0  && i % 5 == 0){
+//                System.out.println("fizzbuzz");
+//            } else if(i % 5 == 0){
+//                System.out.println("buzz");
+//            }else if ( i % 3 == 0 ){
+//                System.out.println("fizz");
+//            }else{
+//                System.out.println(i);
+//            }
+//        }
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please enter a number between 1 and 10 ? ");
+        int userInput = scanner.nextInt();
+        System.out.println("Below is your table");
+        System.out.println("Number | Squared | Cubed");
+        System.out.print("------ | ------ | ------");
+        for(int i = 1; i <= userInput; i++){
+            int userSquared = (int) Math.pow(i,2);
+            int userCubed = (int) Math.pow(i,3);
+            String message = "\n" + i +"      | " + userSquared +"      | " + userCubed;
+            System.out.print(message);
+
         }
     }
 }

@@ -15,14 +15,14 @@ public class ControlFlowExercises {
 //        5 6 7 8 9 10 11 12 13 14 15
 //        int i =5;
 //        while (i <= 15) {
-//            System.out.println(+ i);
+//            System.out.println(i);
 //            i++;}
 //      1.b  Do While
 //
 //        Create a do-while loop that will count by 2's starting with 0 and ending at 100. Follow each number with a new line.
 //        Alter your loop to count backwards by 5's from 100 to -10.
 //        Create a do-while loop that starts at 2, and displays the number squared on each line while the number is less than 1,000,000. Output should equal:
-//        int i = 1;
+//        int i = 0;
 //        do{
 //            System.out.println(i*2);
 //            i++;
@@ -44,7 +44,7 @@ public class ControlFlowExercises {
 //
 //        Refactor the previous two exercises to use a for loop instead.
 //        for(int i = 5; i <= 15; i++ ){
-//        System.out.println(+i);
+//        System.out.println(i);
 //        }
 //        for(int i = 1; i <=50; i++){
 //            System.out.println(i*2);
@@ -79,30 +79,35 @@ public class ControlFlowExercises {
 //        System.out.println("What number would you like to go up to ? ");
 //        int userInput = scanner.nextInt();
 //        System.out.println("Here is your table!");
-//        System.out.println("Number | Squared | Cubed");
-//        System.out.print("------ | ------ | ------");
+//        System.out.println("Number | Squared | Cubed\n------ | ------- | -----");
+////        System.out.print("------ | ------ | ------");
 //        for(int i = 1; i <= userInput; i++){
-//            int userSquared = (int) Math.pow(i,2);
-//            int userCubed = (int) Math.pow(i,3);
-//            String message = "\n" + i +"      | " + userSquared +"      | " + userCubed;
-//            System.out.print(message);
+//            int userSquared = i*i;
+//            int userCubed = i*i*i;
+////            String message = "\n" + i +"      | " + userSquared +"      | " + userCubed;
+//            System.out.printf("%-7d| %-9d | %-6d\n", i, userSquared, userCubed);
 //
 //        }
-        System.out.println(" Please enter a numerical grade from 0 - 100 ?");
-        int userGrade = scanner.nextInt();
-        char grade = 'A';
-        String userResponse ="";
-
+//        System.out.println(" Please enter a numerical grade from 0 - 100 ?");
+//        int userGrade = scanner.nextInt();
+//        char grade = 'A';
+//        String userResponse ="";
+//    boolean confirmation;
+        boolean confirmation;
         do {
-            if (userGrade <= 100 && userGrade >= 90) {
+            System.out.println(" Please enter a numerical grade from 0 - 100 ?");
+            int userGrade = scanner.nextInt();
+            char grade = 'A';
+            String userResponse = "";
+            if (userGrade <= 100 && userGrade >= 88) {
                 grade = 'A';
-            } else if (userGrade <= 90 && userGrade >= 80) {
+            } else if (userGrade <= 87 && userGrade >= 80) {
                 grade = 'B';
-            } else if (userGrade <= 80 && userGrade >= 70) {
+            } else if (userGrade <= 79 && userGrade >= 67) {
                 grade = 'C';
-            } else if (userGrade <= 70 && userGrade >= 60) {
+            } else if (userGrade <= 66 && userGrade >= 60) {
                 grade = 'D';
-            } else if (userGrade <= 60 && userGrade >= 0) {
+            } else if (userGrade <= 59 && userGrade >= 0) {
                 grade = 'F';
             } else {
                 System.out.println("Not a valid input");
@@ -110,8 +115,9 @@ public class ControlFlowExercises {
             System.out.println("Your grade is an " + grade);
             System.out.println("Do you want to continue y/n?");
             userResponse = scanner.next();
+            confirmation = userResponse.equalsIgnoreCase("y");
 
-        }while(Objects.equals(userResponse, "y"));
+        } while (confirmation);
     }
 }
 

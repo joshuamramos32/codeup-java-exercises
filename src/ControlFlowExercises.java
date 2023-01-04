@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.util.Scanner;
 
+
 public class ControlFlowExercises {
     public static void main(String[] args) {
 //      1a.  While
@@ -73,17 +74,38 @@ public class ControlFlowExercises {
 //            }
 //        }
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Please enter a number between 1 and 10 ? ");
-        int userInput = scanner.nextInt();
-        System.out.println("Below is your table");
-        System.out.println("Number | Squared | Cubed");
-        System.out.print("------ | ------ | ------");
-        for(int i = 1; i <= userInput; i++){
-            int userSquared = (int) Math.pow(i,2);
-            int userCubed = (int) Math.pow(i,3);
-            String message = "\n" + i +"      | " + userSquared +"      | " + userCubed;
-            System.out.print(message);
+//        System.out.println("What number would you like to go up to ? ");
+//        int userInput = scanner.nextInt();
+//        System.out.println("Here is your table!");
+//        System.out.println("Number | Squared | Cubed");
+//        System.out.print("------ | ------ | ------");
+//        for(int i = 1; i <= userInput; i++){
+//            int userSquared = (int) Math.pow(i,2);
+//            int userCubed = (int) Math.pow(i,3);
+//            String message = "\n" + i +"      | " + userSquared +"      | " + userCubed;
+//            System.out.print(message);
+//
+//        }
+        System.out.println(" Please enter a numerical grade from 0 - 100 ?");
+        int userGrade = scanner.nextInt();
+        char grade = 'A';
 
+
+            if (userGrade <= 100 && userGrade >=90) {
+                grade = 'A';
+            } else if (userGrade <= 90 && userGrade >= 80) {
+                grade = 'B';
+            } else if (userGrade <= 80 && userGrade >= 70) {
+                grade = 'C';
+            } else if (userGrade <= 70 && userGrade >= 60) {
+                grade = 'D';
+            } else if (userGrade <= 60 && userGrade >= 0) {
+                grade = 'F';
+            } else {
+                System.out.println("Not a valid input");
+            }
+            System.out.println("Your grade is an " + grade);
         }
     }
-}
+
+

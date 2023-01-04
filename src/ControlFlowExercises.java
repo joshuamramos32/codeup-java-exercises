@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.util.Objects;
 import java.util.Scanner;
 
 
@@ -38,6 +39,7 @@ public class ControlFlowExercises {
 //            System.out.println(i);
 //            i*= i;
 //        }while (i < 1000000);
+
 //       1.c For
 //
 //        Refactor the previous two exercises to use a for loop instead.
@@ -89,9 +91,10 @@ public class ControlFlowExercises {
         System.out.println(" Please enter a numerical grade from 0 - 100 ?");
         int userGrade = scanner.nextInt();
         char grade = 'A';
+        String userResponse ="";
 
-
-            if (userGrade <= 100 && userGrade >=90) {
+        do {
+            if (userGrade <= 100 && userGrade >= 90) {
                 grade = 'A';
             } else if (userGrade <= 90 && userGrade >= 80) {
                 grade = 'B';
@@ -105,7 +108,11 @@ public class ControlFlowExercises {
                 System.out.println("Not a valid input");
             }
             System.out.println("Your grade is an " + grade);
-        }
+            System.out.println("Do you want to continue y/n?");
+            userResponse = scanner.next();
+
+        }while(Objects.equals(userResponse, "y"));
     }
+}
 
 

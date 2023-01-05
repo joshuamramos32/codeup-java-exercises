@@ -2,8 +2,8 @@ import java.sql.SQLOutput;
 
 public class StringExercise {
     public static void main(String[] args) {
-        String verse1= "We dont need no education";
-       System.out.println(verse1 + "\nWe dont need no thought control");
+        String verse1= "We dont need no education \nWe dont need no thought control";
+       System.out.println(verse1);
 
        String line2 = "Check \"this\" out!, \"s inside of\"s!";
        System.out.println(line2);

@@ -1,4 +1,5 @@
 
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -11,6 +12,9 @@ public class HighLow {
         do {
             System.out.println("Pick a number between 1-100?");
             int userNum = scanner.nextInt();
+            if(userNum < 1 || userNum > 100){
+                System.out.println("Invalid number. PLease enter a number between 1 - 100.");
+            }
             if (randomNum == userNum) {
                 confirm = false;
                 System.out.println("Good Guess");
@@ -19,6 +23,6 @@ public class HighLow {
             } else {
                 System.out.println("lower");
             }
-        } while (confirm);
+    }while (confirm);
     }
 }

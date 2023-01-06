@@ -43,16 +43,15 @@ public class MethodsExercises {
 //System.out.print("Enter a number between 1 and 10: ");
 //int userInput = getInteger(1, 10);
 //If the input is invalid, prompt the user again.
-//    public static int getInteger(int min, int max) {
-//        int userInput = scanner.nextInt();
-////        System.out.println("please enter a number between 1 and 50?");
-//        if (userInput > min && userInput < max) {
-//            return userInput;
-//        } else {
-//            System.out.print("Enter a integer between " + min + " and " + max + " ?");
-//            return getInteger(min, max);
-//        }
-//    }
+    public static int getInteger(int min, int max) {
+        int userInput = scanner.nextInt();
+        if (userInput > min && userInput < max) {
+            return userInput;
+        } else {
+            System.out.print("Enter a integer between " + min + " and " + max + " ?");
+            return getInteger(min, max);
+        }
+    }
 
 //TODO. 3.Calculate the factorial of a number.
 // Prompt the user to enter an integer from 1 to 10.
@@ -126,9 +125,9 @@ public class MethodsExercises {
 //            System.out.println(multiply(2, 5));
 //            System.out.println(divide(10, 2));
 //            System.out.println(modulus(101, 8));
-//            System.out.print("Enter a integer between 1 and 10 ? ");
-//            int userInput = getInteger(1, 10);
-//            System.out.println("Valid input: " + userInput);
+            System.out.print("Enter a integer between 1 and 10 ? ");
+            int userInput = getInteger(1, 10);
+            System.out.println("Valid input: " + userInput);
 //            getFactorial();
             diceRoll();
 

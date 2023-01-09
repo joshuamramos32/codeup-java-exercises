@@ -22,7 +22,10 @@ public class Input {
         int input;
         do {
             input = this.getInt();
-        } while (input < min || input > max);
+            if ( input < min || input > max){
+                System.out.println("Invalid number please enter a new number between" + min + "and" + max + ".");
+            }
+        } while (input < min|| input > max);
         return input;
     }
 
@@ -34,6 +37,9 @@ public class Input {
         double input;
         do {
             input = this.getDouble();
+            if (input < min || input > max){
+                System.out.println("Invalid decimal number please enter a number between"+ min + " and" + "max" + ".");
+            }
         } while (input < min || input > max);
         return input;
     }

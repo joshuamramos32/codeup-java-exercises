@@ -16,5 +16,10 @@ public class InputTest {
         System.out.println("Enter a decimal number ");
         double userDouble = input.getDouble(1,10);
         System.out.println("User entered: " + userDouble);
+        System.out.println("Enter a number between 1 - 10");
+        System.out.println("User entered: " + input.getInt() );
+        System.out.println("Enter a number between 1 - 10");
+        System.out.println("User entered: " + input.getDouble());
+
     }
 }

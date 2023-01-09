@@ -12,6 +12,10 @@ public class Input {
     public String getString() {
         return this.scanner.nextLine();
     }
+//    public String getString(String prompt){
+//        System.out.println(prompt);
+//        return this.scanner.nextLine();
+//    }
 
     public boolean yesNo() {
         String input = this.getString();

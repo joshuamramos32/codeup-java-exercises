@@ -1,19 +1,30 @@
-public class ServerNameGenerator {
-    public static void main(String[] args) {
-        String[] adjectives = new String[10];
-// wax sock hate cherry lumber eggs agreement word beef condition
+import jdk.dynalink.beans.StaticClass;
 
-       String[] nouns = new String[10];
-       nouns[0] = "Wax";
-       nouns[1] = "Sock";
-       nouns[2] = "Hate";
-       nouns[3] = "Cherry";
-       nouns[4] = "Lumber";
-       nouns[5] = "Eggs";
-       nouns[6] = "Agreement";
-       nouns[7] = "Word";
-       nouns[8] = "Beef";
-       nouns[9] = "Condition";
+import java.sql.SQLOutput;
+import java.util.Arrays;
+import java.util.Random;
+
+public class ServerNameGenerator {
+   public static String[] adjectives = {"Deadpan","Berserk","Jumpy","Cloistered","Voracious","Resonant","Naughty","Luxuriant","Wiry","Giant"
+};
+
+    public static String[] nouns ={"Wax", "Sock", "Hate","Cherry","Lumber","Eggs","Agreement","Word", "Beef", "Condition"};
+    public static String randomWord(String[]array) {
+        int random = new Random().nextInt(array.length);
+        return array[random];
+    }
+
+
+
+
+    public static void main(String[] args) {
+    String adjective = randomWord(adjectives);
+    String noun = randomWord(nouns);
+    System.out.println("Here is your server name: \n" + adjective + " " + noun);
+
+
+
 
     }
+
 }

@@ -6,9 +6,11 @@ public class Square extends Rectangle {
         super(side,side);
     }
     public double getArea() {
-        return length * length;
+        double side = this.width;
+        return side * side;
     }
     public double getPerimeter(){
-        return 4 * length;
+        double side = this.width;
+        return 4 * side;
     }
 }

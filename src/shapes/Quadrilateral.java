@@ -11,7 +11,7 @@ package shapes;
      }
 
      public double getLength() {
-         return length;
+         return this.length;
      }
 
      public void setLength(double length) {
@@ -19,7 +19,7 @@ package shapes;
      }
 
      public double getWidth() {
-         return width;
+         return this.width;
      }
 
      public void setWidth(double width) {

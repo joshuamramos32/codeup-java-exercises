@@ -6,22 +6,23 @@ import java.util.Scanner;
 public class GradesApplication {
     public static void main(String[] args) {
         HashMap<String, Student> students = new HashMap<>();
-        Student josh = new Student("joshuamramos32");
+        Student josh = new Student("Josh");
         josh.addGrade(100);
         josh.addGrade(50);
         josh.addGrade(100);
-        Student nina = new Student("ninapramos31");
+        Student nina = new Student("Nina");
         nina.addGrade(100);
         nina.addGrade(99);
         nina.addGrade(98);
-        Student amelia = new Student("ameliagacosta30");
+        Student amelia = new Student("Amelia");
         amelia.addGrade(100);
         amelia.addGrade(90);
         amelia.addGrade(80);
-        Student carter = new Student("carterscarillo29");
+        Student carter = new Student("Carter");
         carter.addGrade(99);
         carter.addGrade(89);
         carter.addGrade(79);
+
 
 //        Student all = new Student("all students");
 //        all.addGrade(josh,nina,amelia,carter);
@@ -31,6 +32,7 @@ public class GradesApplication {
         students.put("ameliagacosta30", amelia);
         students.put("carterscarillo29", carter);
         System.out.println(students);
+        System.out.println();
 
         Scanner scanner = new Scanner(System.in);
         String userRequest;
@@ -40,7 +42,7 @@ public class GradesApplication {
         do {
             System.out.println("Welcome! \n\nHere are the GitHub usernames of our students: \n");
             for (HashMap.Entry<String, Student> entry : students.entrySet()) {
-                System.out.print("|" + entry.getValue().getName() + "| ");
+                System.out.print("|" + entry.getKey() + "| ");
             }
             System.out.println("\n\nWhat student would you like to see more information on? ");
             System.out.println();

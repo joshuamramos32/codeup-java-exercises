@@ -53,18 +53,80 @@ public class Input {
     }
 }
 
-    //below is from walkthrough
+    //below is from walk through
 
+//    public int getInt(int min, int max) {
+//        int input;
+//        try {
+//            System.out.println("Enter a number between " + min + " and " + max + ".");
+//            input = Integer.parseInt(getString(""));
+//            if (input < min || input > max) {
+//                throw new Exception("Value is out of provided range of: " + min + " to " + max +".");
+//            }
+//            System.out.println("Input acceptable");
+//            return input;
+//        } catch (NumberFormatException nfe) {
+//            System.out.println("User failed to input a number.");
+//            return getInt(min, max);
+//        } catch (Exception e) {
+//            System.out.println(e.getMessage());
+//            return getInt(min, max);
+//        }
+//    }
+//
+//    public int getInt(String prompt, int min, int max) {
+//        int input;
+//        do {
+//            System.out.println(prompt);
+//            input = this.scanner.nextInt();
+//            if (input < min || input > max) {
+//                System.out.println("Input invalid");
+//            }
+//        } while (input < min || input > max);
+//        System.out.println("Input acceptable");
+//        return input;
+//    }
+//
+//    public int getIntegerSecret(int min, int max) {
+//        int input;
+//        try {
+//            System.out.println("Enter a number between " + min + " and " + (max - 1) + ".");
+//            input = Integer.parseInt(getString(""));
+//            if (input < min || input > max) {
+//                throw new Exception("Value is out of provided range of: " + min + " to " + (max - 1) +".");
+//            }
+//            System.out.println("Input acceptable");
+//            return input;
+//        } catch (NumberFormatException nfe) {
+//            System.out.println("User failed to input a number.");
+//            return getIntegerSecret(min, max);
+//        } catch (Exception e) {
+//            System.out.println(e.getMessage());
+//            return getIntegerSecret(min, max);
+//        }
+//    }
+//
+//    public int getInt() {
+//        System.out.println("Input number...");
+//        try {
+//            int userInput = Integer.valueOf(this.scanner.nextLine());
+//            System.out.println("Input acceptable");
+//            return userInput;
+//        } catch (NumberFormatException e) {
+//            System.out.println("Invalid. Input not an integer. Try again.");
+//            return getInt();
+//        }
+//    }
+//
 //    public int getInt(String prompt) {
 //        System.out.println(prompt);
-//        while (true) {
-//            try {
-//                int userInput = Integer.valueOf(this.scanner.nextLine());
-//                System.out.println("Input acceptable");
-//                return userInput;
-//            } catch (NumberFormatException e) {
-//                System.out.println("Invalid. Input not an integer. Try again.");
-//            }
+//        try {
+//            int userInput = Integer.valueOf(this.scanner.nextLine());
+//            System.out.println("Input acceptable");
+//            return userInput;
+//        } catch (NumberFormatException e) {
+//            System.out.println("Invalid. Input not an integer. Try again.");
+//            return getInt(prompt);
 //        }
 //    }
 //
@@ -83,14 +145,13 @@ public class Input {
 //
 //    public double getDouble() {
 //        System.out.println("Input number...");
-//        while (true) {
-//            try {
-//                double userInput = Double.valueOf(getString());
-//                System.out.println("Input acceptable");
-//                return userInput;
-//            } catch (NumberFormatException e) {
-//                System.out.println("Invalid. Input not an double. Try again.");
-//            }
+//        try {
+//            double userInput = Double.valueOf(getString());
+//            System.out.println("Input acceptable");
+//            return userInput;
+//        } catch (NumberFormatException e) {
+//            System.out.println("Invalid. Input not an double. Try again.");
+//            return getDouble();
 //        }
 //    }
 //
@@ -134,4 +195,3 @@ public class Input {
 //    }
 //
 //}
-
